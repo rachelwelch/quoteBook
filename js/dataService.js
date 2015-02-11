@@ -17,14 +17,14 @@ app.service('mainService', function() {
     };
     
     this.addData = function(data) {
-        if(data === {text: '', author: ''}) {
+        if(quotes.text && quotes.author) {
           quotes.push(data);
         }
     };
     
     this.removeData = function(quoteText) {
         quoteText = quotes.text;
-        for (var i = 0; i < quotes.length; i++_ {
+        for (var i = 0; i < quotes.length; i++) {
              if (quotes[i] === quoteText) {
                quotes.splice(quotes[i]); 
             }
