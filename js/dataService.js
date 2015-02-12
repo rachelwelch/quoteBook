@@ -16,20 +16,17 @@ app.service('mainService', function() {
         return quotes;
     };
     
-    this.addData = function(data) {
-        if(quotes.text && quotes.author) {
-          quotes.push(data);
-        }
+    this.addData = function(quoteText, authorName) {
+      var newQuote = {
+          text: quoteText,
+          author: authorName
+          }
+          console.log(newQuote);
+          quotes.push(newQuote);
     };
-    
-    this.removeData = function(quoteText) {
-        quoteText = quotes.text;
-        for (var i = 0; i < quotes.length; i++) {
-             if (quotes[i] === quoteText) {
-               quotes.splice(quotes[i]); 
-            }
-        }
-    return quotes;
+          
+    this.removeData = function(index) {
+        quotes.splice(index, 1);
     };
 
 });
