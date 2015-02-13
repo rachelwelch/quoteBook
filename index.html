@@ -6,43 +6,10 @@
 </head>
 <body ng-controller="MainController">
     
-<!--
-  <header class="buttonNav">   
-    <div class="toggleButton">
-      <button class="title" ng-click='toggleAdd()'>Add Quote</button>
-        <div ng-show="showAdd">
-          <input type="text" placeholder="Add Quote" class="inputButton">
-          <button class="submit" ng-click='addData()'>Submit</button>
-        </div>
-    </div>
-    
-    <div class="toggleButton">
-      <button ng-click='toggleRemove()'>Remove Quote</button>
-        <div ng-show="showRemove">
-          <input type="text" placeholder="Remove Quote" class="inputButton">
-          <button ng-click="removeData()">Submit</button>
-        </div>
-    </div>
-    
-    <div class="toggleButton">
-      <button ng-click='toggleFilter()'>Filter Quote</button>
-        <div ng-show="showFilter">
-          <input type="text" placeholder="Filter Quote" class="inputButton" ng-model="searchTerm.text"><button>Submit</button>
-        </div>
-    </div>
-  </header>
--->
-    
-<!--
-    <input type='text' placeholder='Type here'><button>Add Quote</button>
-    <input type='text' placeholder='Type here'><button>Remove Quote</button>
-    <input type='text' placeholder='Type here' ng><button>Filter Quotes</button>
--->
-    
-    <div class="btnbox">
-			<div>
+    <div class="headBox">
+			<div class="btnBox">
 				<button ng-click="toggle()">Add a Quote</button>
-				<div class="headBox">
+				<div class="subBox">
 					<form ng-show="showForm">
 						<input type="text" placeholder="Enter new Quote" ng-model="text">
 						<input type="text" placeholder="Author Name" ng-model="author">
@@ -50,10 +17,10 @@
 					</form>
 				</div>
 			</div>
-			<div>
+			<div class="btnBox">
 				<button ng-click="showRemove()">Remove Quote</button>
 			</div>
-			<div>
+			<div class="btnBox">
 				<button ng-click="filterOn = !filterOn">Filter Quotes</button>
       			<input ng-show="filterOn" ng-model="searchTerm" type='text' placeholder="Enter Quote here">
 			</div>
